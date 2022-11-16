@@ -1,1 +1,8 @@
-[]
+[
+  {
+    "id": "Armory.Kubesvc",
+    "description": "Spinnaker with Kubernetes",
+    "provider": "https://armory.io",
+    "releases": []
+  }
+]
