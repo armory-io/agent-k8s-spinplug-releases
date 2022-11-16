@@ -25,7 +25,7 @@ jobs:
           version: ${{ github.event.client_payload.version }}
           repository: ${{ github.event.client_payload.org }}/${{ github.event.client_payload.repo }}
           file: ${{ github.event.client_payload.artifactName }}
-          token: ${{ secrets.TOKEN }}
+          token: ${{ secrets.ARMORY_PLATFORM_GITHUB_PAT_TOKEN }}
       - name: upload release asset
         id: upload-release-asset 
         uses: actions/upload-release-asset@v1
