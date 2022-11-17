@@ -20,19 +20,28 @@ jobs:
           draft: false
           prerelease: false
       - name: download release asset
-        uses: fabriciobastian/download-release-asset-action@v1.0.6
-        with:
+        env:
+          #remove v from tag: i.e 0.9.74
           version: ${{ github.event.client_payload.version }}
-          repository: ${{ github.event.client_payload.org }}/${{ github.event.client_payload.repo }}
-          file: ${{ github.event.client_payload.artifactName }}
-          token: ${{ secrets.ARMORY_PLATFORM_GITHUB_PAT_TOKEN }}
+          #armory/kubesvc-plugin
+          dockerrepository: ${{ github.event.client_payload.dockerrepository }}
+          #/opt/plugin/kubesvc-$version.zip
+          asset_path: ${{ github.event.client_payload.artifactPath }}/${{ github.event.client_payload.artifactName }}
+        run: |
+          set -uexo pipefail
+          : ${version:?Missing version}
+          docker pull $dockerrepository:$version
+          id=$(docker run --rm -d $dockerrepository:$version sh -c 'exec tail -f /dev/null')
+          : ${id:?Missing container id}
+          docker cp "$id:$asset_path" .
+          docker kill "$id"
       - name: upload release asset
-        id: upload-release-asset 
+        id: upload-release-asset
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }} 
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./${{ github.event.client_payload.artifactName }}
           asset_name: ${{ github.event.client_payload.artifactName }}
           asset_content_type: application/zip
