@@ -26,7 +26,7 @@ jobs:
           #armory/kubesvc-plugin
           dockerrepository: ${{ github.event.client_payload.dockerrepository }}
           #/opt/plugin/kubesvc-$version.zip
-          asset_path: ${{ github.event.client_payload.artifactPath }}/${{ github.event.client_payload.artifactName }}
+          asset_path: ${{ github.event.client_payload.dockerArtifactPath }}/${{ github.event.client_payload.artifactName }}
         run: |
           set -uexo pipefail
           : ${version:?Missing version}
@@ -43,7 +43,7 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./${{ github.event.client_payload.artifactName }}
-          asset_name: ${{ github.event.client_payload.artifactName }}
+          asset_name: agent-k8s-spinplug-${{ github.event.client_payload.version }}.zip
           asset_content_type: application/zip
       - name: remove release asset
         run: |
