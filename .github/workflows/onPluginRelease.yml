@@ -11,10 +11,11 @@ jobs:
     steps:
       - name: create release
         id: create_release
-        uses: actions/create-release@v1
+        uses: ncipollo/release-action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
+          allowUpdates: true
           tag_name: ${{ github.event.client_payload.version }}
           release_name: Release ${{ github.event.client_payload.version }}
           draft: false
