@@ -6,6 +6,7 @@ on:
 
 jobs:
   build:
+    concurrency: ${{ github.repository }}
     name: Add Release To Repo
     runs-on: ubuntu-latest
     steps:
