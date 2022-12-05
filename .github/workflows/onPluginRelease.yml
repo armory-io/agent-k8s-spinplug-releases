@@ -17,8 +17,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           allowUpdates: true
-          tag_name: ${{ github.event.client_payload.version }}
-          release_name: Release ${{ github.event.client_payload.version }}
+          tag: ${{ github.event.client_payload.version }}
+          name: Release ${{ github.event.client_payload.version }}
           draft: false
           prerelease: false
       - name: download release asset
