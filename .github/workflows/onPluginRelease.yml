@@ -17,6 +17,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           allowUpdates: true
+          removeArtifacts: true
           tag: ${{ github.event.client_payload.version }}
           name: Release ${{ github.event.client_payload.version }}
           draft: false
