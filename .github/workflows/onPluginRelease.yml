@@ -52,6 +52,8 @@ jobs:
           rm ${{ github.event.client_payload.artifactName }}
       - name: checkout code
         uses: actions/checkout@v2
+        with:
+          ref: ${{ github.ref }}
       - name: add release to plugin repo
         run: |
           echo "Go run addPluginReleaseToRepo: $(go run .github/workflows/addPluginReleaseToRepo.go '${{ toJson(github.event.client_payload) }}')"
