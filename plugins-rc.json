@@ -1,0 +1,9 @@
+[
+    {
+      "id": "Armory.Kubesvc",
+      "description": "Spinnaker with Kubernetes (RC)",
+      "provider": "https://armory.io",
+      "releases": [
+      ]
+    }
+]
