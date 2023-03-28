@@ -10,6 +10,10 @@ jobs:
     name: Add Release To Repo
     runs-on: ubuntu-latest
     steps:
+      - name: validate
+        run: |
+          set -uexo pipefail
+          test '${{ github.event.client_payload.version }}' == '${{ github.event.client_payload.released.releases[0].version }}'
       - name: create release
         id: create_release
         uses: ncipollo/release-action@v1
