@@ -1,0 +1,6 @@
+[
+    {
+      "id": "AgentK8sRepo",
+      "url": "https://raw.githubusercontent.com/armory-io/agent-k8s-spinplug-releases/master/plugins-rc.json"
+    }
+]
