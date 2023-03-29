@@ -1,9 +1,17 @@
 [
     {
       "id": "Armory.Kubesvc",
-      "description": "Spinnaker with Kubernetes (RC)",
+      "description": "Spinnaker with Kubernetes",
       "provider": "https://armory.io",
       "releases": [
+        {
+          "version": "0.9.90-rc.1",
+          "date": "2023-03-28T23:56:05.418179Z",
+          "requires": "clouddriver>=0.0.0",
+          "sha512sum": "a9e9b603df0f8d4755f84b4ddfcd7b37fa894b86cb4bad2c6540115efcb4ca9fb5131a3c7ee40dadae846de09426ad6afd13706a0babf16131c42a5803756406",
+          "state": "",
+          "url": "https://github.com/armory-io/agent-k8s-spinplug-releases/releases/download/0.9.90-rc.1/agent-k8s-spinplug-0.9.90-rc.1.zip"
+        }
       ]
     }
-]
+  ]
