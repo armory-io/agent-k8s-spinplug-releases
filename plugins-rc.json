@@ -5,6 +5,14 @@
       "provider": "https://armory.io",
       "releases": [
         {
+          "version": "0.12.5-rc.1",
+          "date": "2023-06-05T22:22:18.539181Z",
+          "requires": "clouddriver>=0.0.0",
+          "sha512sum": "68a784088bc877e22e538e2160e7ea3b09aeb8008a5eff1d66871d4a74a0afceb67db88ef497d1fd66f389edef08db49545ca9ebedf8e30161e57750d66b03ff",
+          "state": "",
+          "url": "https://github.com/armory-io/agent-k8s-spinplug-releases/releases/download/0.12.5-rc.1/agent-k8s-spinplug-0.12.5-rc.1.zip"
+        },
+        {
           "version": "0.13.5-rc.1",
           "date": "2023-06-05T22:18:47.078666Z",
           "requires": "clouddriver>=0.0.0",
