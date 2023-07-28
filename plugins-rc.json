@@ -5,6 +5,14 @@
       "provider": "https://armory.io",
       "releases": [
         {
+          "version": "0.14.0-rc.fix.disconnection.0",
+          "date": "2023-07-28T16:40:03.017587Z",
+          "requires": "clouddriver>=0.0.0",
+          "sha512sum": "c7bf7b60329014def41b12c718d45b2c172bca3d64533b260bcdfcbdee2297bc7ff72e9fe0c2c6f9c70b3dabb1e8f177ba7174cb64ea521ac7eb7c1b8f75dcf1",
+          "state": "",
+          "url": "https://github.com/armory-io/agent-k8s-spinplug-releases/releases/download/0.14.0-rc.fix.disconnection.0/agent-k8s-spinplug-0.14.0-rc.fix.disconnection.0.zip"
+        },
+        {
           "version": "0.12.9-rc.1",
           "date": "2023-07-19T22:40:07.228906Z",
           "requires": "clouddriver>=0.0.0",
