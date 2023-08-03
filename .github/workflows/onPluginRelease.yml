@@ -37,6 +37,7 @@ jobs:
         run: |
           set -uexo pipefail
           : ${version:?Missing version}
+          [[ "$dockerrepository" = 'armory-docker-local.jfrog.io/'* ]] && docker login -u '${{ secrets.JFROG_SPIN_USER }}' -p '${{ secrets.JFROG_SPIN_PASSWORD }}' armory-docker-local.jfrog.io
           docker pull $dockerrepository:$version
           id=$(docker run --rm -d $dockerrepository:$version sh -c 'exec tail -f /dev/null')
           : ${id:?Missing container id}
