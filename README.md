@@ -25,8 +25,10 @@ _It should be noted that the plugins framework for Spinnaker is still in active 
     spinnaker:
       extensibility:
         repositories:
-          armory:
+          armory-agent-plugin:
             url: https://raw.githubusercontent.com/armory-io/agent-k8s-spinplug-releases/master/repositories.json
+          armory-agent-plugin-rc:
+            url: https://raw.githubusercontent.com/armory-io/agent-k8s-spinplug-releases/master/rc/repositories-rc.json
         plugins:
           Armory.Kubesvc:
             enabled: true
