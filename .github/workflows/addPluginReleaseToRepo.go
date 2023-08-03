@@ -97,7 +97,10 @@ func addReleaseToPlugins(releaseEvent PluginReleaseEvent, existingPlugins []Plug
 
 func repoFileFor(version string) string {
 	if strings.Contains(version, "-rc.") {
-		return "plugins-rc.json"
+		return "rc/plugins-rc.json"
+	}
+	if strings.Contains(version, "-snapshot.") {
+		return "rc/plugins-rc.json"
 	}
 	return "plugins.json"
 }

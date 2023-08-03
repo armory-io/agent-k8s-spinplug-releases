@@ -262,7 +262,12 @@ func Test_repoFileFor(t *testing.T) {
 		{
 			name: "rc",
 			args: args{version: "v1.0.50-rc.1"},
-			want: "plugins-rc.json",
+			want: "rc/plugins-rc.json",
+		},
+		{
+			name: "rc",
+			args: args{version: "0.14.0-snapshot.fix.hs.07b59665"},
+			want: "rc/plugins-rc.json",
 		},
 		{
 			name: "release",
