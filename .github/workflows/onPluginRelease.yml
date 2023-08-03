@@ -62,6 +62,7 @@ jobs:
           ref: ${{ github.ref }}
       - name: add release to plugin repo
         run: |
+          set -uexo pipefail
           echo "Go run addPluginReleaseToRepo: $(go run .github/workflows/addPluginReleaseToRepo.go '${{ toJson(github.event.client_payload) }}')"
       - name: commit files
         run: |
