@@ -5,6 +5,14 @@
       "provider": "https://armory.io",
       "releases": [
         {
+          "version": "0.14.0-rc.hs.feat.4",
+          "date": "2023-09-01T18:40:06.N",
+          "requires": "clouddriver>=0.0.0",
+          "sha512sum": "d0babe308e4cbd8c91cb87b1d014d42932a9880f802af07c25ae5222579c72525a84b7cde31c26767b42acee45372b1eb277643f7015be2d9df785cfd369bbaf",
+          "state": "",
+          "url": "https://github.com/armory-io/agent-k8s-spinplug-releases/releases/download/0.14.0-rc.hs.feat.4/agent-k8s-spinplug-0.14.0-rc.hs.feat.4.zip"
+        },
+        {
           "version": "0.11.50-rc.1",
           "date": "2023-09-01T16:56:15.438638Z",
           "requires": "clouddriver>=0.0.0",
@@ -139,14 +147,6 @@
           "sha512sum": "484310008d70dadfd36f87a3b76300621fde44509e2351bdec011b893dfada391354829776aed5b9b4f25939c8ddc9bf006ced502949540fba4060389eba387b",
           "state": "",
           "url": "https://github.com/armory-io/agent-k8s-spinplug-releases/releases/download/0.12.11-rc.1/agent-k8s-spinplug-0.12.11-rc.1.zip"
-        },
-        {
-          "version": "0.14.0-rc.hs.feat.4",
-          "date": "2023-08-03T22:55:13.N",
-          "requires": "clouddriver>=0.0.0",
-          "sha512sum": "92cf829f9c7a258c23e8515348418d80c85f120a98a1b90af88d1855c8822d6a77c9f235ddf94cb3931d40556f38da7a60ddeaeec4e5d9d61aa490b416dde346",
-          "state": "",
-          "url": "https://github.com/armory-io/agent-k8s-spinplug-releases/releases/download/0.14.0-rc.hs.feat.4/agent-k8s-spinplug-0.14.0-rc.hs.feat.4.zip"
         },
         {
           "version": "0.14.0-snapshot.fix.hs.07b59665",
