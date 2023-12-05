@@ -5,7 +5,7 @@
     "provider": "https://github.com/armory-io",
     "releases": [
       {
-            "version": "30ed210",
+            "version": "0.0.1",
             "date": "2023-12-04T21:04:51.692245Z",
             "requires": "gate>=0.0.0,orca>=0.0.0",
             "sha512sum": "a1c3fa01276d546320a77576747eb8db3107a2edcacefd974f9e0a9c1f702d1fe25ca015115af508fa0baf64f05c18b341e7064ed545855882633eacdf270ef1",
